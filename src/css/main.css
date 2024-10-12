@@ -30,3 +30,6 @@
 
 /* for responsive card styling */
 @import "./components/responsive-cards.css" layer(compositions);
+
+/* for title */
+@import "./components/title.css" layer(compositions);

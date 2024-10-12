@@ -1,6 +1,6 @@
 .card__wrapper {
   display: flex;
-  gap: 8px;
+  gap: var(--space-2xs-3xl);
   overflow: auto hidden;
   overscroll-behavior-x: contain;
   scroll-snap-type: x mandatory;

@@ -1,3 +1,15 @@
+/* @link https://utopia.fyi/clamp/calculator?a=320,1240,4—12|6—11|24—25|28—36|40—45|100—200|148—296 */
+
+:root {
+  --fluid-4-12: clamp(0.25rem, 0.0761rem + 0.8696vw, 0.75rem);
+  --fluid-6-11: clamp(0.375rem, 0.2663rem + 0.5435vw, 0.6875rem);
+  --fluid-24-25: clamp(1.5rem, 1.4783rem + 0.1087vw, 1.5625rem);
+  --fluid-28-36: clamp(1.75rem, 1.5761rem + 0.8696vw, 2.25rem);
+  --fluid-40-45: clamp(2.5rem, 2.3913rem + 0.5435vw, 2.8125rem);
+  --fluid-100-200: clamp(6.25rem, 4.0761rem + 10.8696vw, 12.5rem);
+  --fluid-148-296: clamp(9.25rem, 6.0326rem + 16.087vw, 18.5rem);
+}
+
 .thumbnail {
   min-width: 104px;
   min-height: 148px;
@@ -8,7 +20,8 @@
   margin-left: 4px;
   border-radius: 4px;
   background-color: #d9d9d9;
-  height: 148px;
+  width: var(--fluid-100-200);
+  height: var(--fluid-148-296);
   position: relative;
 }
 
@@ -30,10 +43,10 @@
 
 .thumbnail__tag {
   position: absolute;
-  top: 4px;
+  top: var(--fluid-4-12);
   left: 0px;
-  width: 40px;
-  height: 24px;
+  width: var(--fluid-40-45);
+  height: var(--fluid-24-25);
   background-color: var(--color-primary-600);
   border-radius: 8px 8px 8px 0px;
   color: var(--color-primary-50);
@@ -44,9 +57,9 @@
 
 .thumbnail__tag_bottom {
   position: absolute;
-  width: 4px;
-  height: 5.74px;
-  top: 28px;
+  width: var(--fluid-4-12);
+  height: var(--fluid-6-11);
+  top: var(--fluid-28-36);
   left: 0px;
   border-radius: 0px 0px 0px 8px;
   background-color: var(--color-primary-900);
